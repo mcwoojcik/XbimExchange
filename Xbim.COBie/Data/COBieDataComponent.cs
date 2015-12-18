@@ -4,11 +4,8 @@ using System.Linq;
 using Xbim.COBie.Rows;
 using Xbim.Ifc2x3.Kernel;
 using Xbim.Ifc2x3.ProductExtension;
-using Xbim.XbimExtensions;
 using Xbim.Ifc2x3.PropertyResource;
-using Xbim.IO;
 using Xbim.Common.Geometry;
-using XbimGeometry.Interfaces;
 #if DEBUG
 using System.Diagnostics;
 #endif

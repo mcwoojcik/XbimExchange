@@ -1,21 +1,16 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
 using Xbim.COBie.Contracts;
 using Xbim.COBie.Rows;
 using Xbim.COBie.Serialisers.XbimSerialiser;
+using Xbim.Common;
 using Xbim.Ifc2x3.Extensions;
-using Xbim.Ifc2x3.Kernel;
-using Xbim.IO;
-using Xbim.XbimExtensions;
-using Xbim.XbimExtensions.Transactions;
-using Xbim.Ifc2x3.ProductExtension;
-using Xbim.Ifc2x3.UtilityResource;
-using Xbim.XbimExtensions.Interfaces;
 using Xbim.Ifc2x3.GeometryResource;
+using Xbim.Ifc2x3.Kernel;
+using Xbim.Ifc2x3.IO;
+using Xbim.IO.Esent;
 //using Xbim.XbimExtensions.Parser;
 
 namespace Xbim.COBie.Serialisers

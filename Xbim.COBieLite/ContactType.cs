@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Newtonsoft.Json;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Serialization;
-using Newtonsoft.Json;
 using Xbim.Ifc2x3.ActorResource;
-using Xbim.Ifc2x3.Kernel;
-using Xbim.XbimExtensions.SelectTypes;
 
 namespace Xbim.COBieLite
 {

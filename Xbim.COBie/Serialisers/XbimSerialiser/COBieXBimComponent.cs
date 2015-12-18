@@ -1,17 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using Xbim.COBie.Rows;
-using Xbim.XbimExtensions.Transactions;
-using Xbim.Ifc2x3.Kernel;
-using Xbim.XbimExtensions;
 using System.Reflection;
-using Xbim.Ifc2x3.ProductExtension;
-using Xbim.Ifc2x3.MeasureResource;
+using Xbim.COBie.Rows;
+using Xbim.Common;
 using Xbim.Ifc2x3.Extensions;
-using Xbim.XbimExtensions.Interfaces;
-using Xbim.IO;
+using Xbim.Ifc2x3.Kernel;
+using Xbim.Ifc2x3.MeasureResource;
+using Xbim.Ifc2x3.ProductExtension;
 
 namespace Xbim.COBie.Serialisers.XbimSerialiser
 {

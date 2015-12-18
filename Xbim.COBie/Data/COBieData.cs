@@ -1,20 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using Xbim.Ifc2x3.UtilityResource;
-using Xbim.Ifc2x3.MeasureResource;
-using Xbim.Ifc2x3.ActorResource;
-using Xbim.Ifc2x3.PropertyResource;
-using Xbim.Ifc2x3.Kernel;
-using Xbim.Ifc2x3.ExternalReferenceResource;
-using Xbim.Ifc2x3.ProductExtension;
 using System.Globalization;
+using System.Linq;
 using Xbim.COBie.Resources;
+using Xbim.Common;
+using Xbim.Ifc2x3.ActorResource;
 using Xbim.Ifc2x3.ApprovalResource;
 using Xbim.Ifc2x3.ConstructionMgmtDomain;
+using Xbim.Ifc2x3.ExternalReferenceResource;
+using Xbim.Ifc2x3.Kernel;
 using Xbim.Ifc2x3.MaterialResource;
-using Xbim.XbimExtensions.Interfaces;
-using Xbim.XbimExtensions.SelectTypes;
+using Xbim.Ifc2x3.MeasureResource;
+using Xbim.Ifc2x3.ProductExtension;
+using Xbim.Ifc2x3.PropertyResource;
+using Xbim.Ifc2x3.UtilityResource;
 using Xbim.IO;
 
 

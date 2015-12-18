@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Bson;
+using Newtonsoft.Json.Converters;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Globalization;
@@ -6,23 +9,17 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
+using System.Xml;
 using System.Xml.Serialization;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Bson;
-using Newtonsoft.Json.Converters;
 using Xbim.Common.Logging;
 using Xbim.Ifc2x3.ActorResource;
-using Xbim.Ifc2x3.Extensions;
 using Xbim.Ifc2x3.ExternalReferenceResource;
 using Xbim.Ifc2x3.Kernel;
 using Xbim.Ifc2x3.MeasureResource;
 using Xbim.Ifc2x3.ProductExtension;
-using Xbim.Ifc2x3.PropertyResource;
 using Xbim.Ifc2x3.QuantityResource;
 using Xbim.Ifc2x3.SharedFacilitiesElements;
 using Xbim.IO;
-using System.Xml;
-using Xbim.XbimExtensions.SelectTypes;
 using Formatting = System.Xml.Formatting;
 
 namespace Xbim.COBieLite

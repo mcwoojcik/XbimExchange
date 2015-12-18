@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using Xbim.Ifc2x3.ExternalReferenceResource;
-using Xbim.XbimExtensions.Interfaces;
-using Xbim.IO;
 using Xbim.COBie.Data;
+using Xbim.Common;
 using Xbim.Ifc2x3.ActorResource;
+using Xbim.Ifc2x3.ExternalReferenceResource;
+using Xbim.IO;
 
 namespace Xbim.COBie
 {
-	/// <summary>
-	/// Context for generating COBie data from one or more IFC models
-	/// </summary>
+    /// <summary>
+    /// Context for generating COBie data from one or more IFC models
+    /// </summary>
     public class COBieContext : ICOBieContext 
 	{
 

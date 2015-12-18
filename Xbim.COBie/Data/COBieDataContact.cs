@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using Xbim.COBie.Rows;
 using Xbim.Ifc2x3.ActorResource;
-using Xbim.Ifc2x3.MeasureResource;
-using Xbim.Ifc2x3.UtilityResource;
-using Xbim.XbimExtensions;
-using Xbim.Ifc2x3.Kernel;
-using Xbim.XbimExtensions.SelectTypes;
 using Xbim.Ifc2x3.PropertyResource;
 
 namespace Xbim.COBie.Data

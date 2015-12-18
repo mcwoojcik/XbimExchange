@@ -2,24 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Xbim.Ifc2x3.UtilityResource;
-using Xbim.Ifc2x3.MeasureResource;
-using Xbim.Ifc2x3.Kernel;
-using Xbim.XbimExtensions;
-using Xbim.Ifc2x3.GeometryResource;
 using Xbim.Ifc2x3.ActorResource;
-using Xbim.Ifc2x3.ProductExtension;
-using Xbim.Ifc2x3.ExternalReferenceResource;
-using Xbim.Ifc2x3.PropertyResource;
-using Xbim.Ifc2x3.Extensions;
-using Xbim.Ifc.SelectTypes;
-using Xbim.Ifc2x3.ApprovalResource;
 using Xbim.Ifc2x3.ConstructionMgmtDomain;
-using System.Reflection;
+using Xbim.Ifc2x3.Extensions;
+using Xbim.Ifc2x3.ExternalReferenceResource;
+using Xbim.Ifc2x3.GeometryResource;
+using Xbim.Ifc2x3.Kernel;
+using Xbim.Ifc2x3.MeasureResource;
+using Xbim.Ifc2x3.ProductExtension;
+using Xbim.Ifc2x3.PropertyResource;
+using Xbim.Ifc2x3.UtilityResource;
 using Xbim.IO;
-using Xbim.XbimExtensions.SelectTypes;
-using Xbim.XbimExtensions.Interfaces;
-using Xbim.Ifc2x3.MaterialResource;
+using Xbim.IO.Esent;
 
 namespace Xbim.COBie.Serialisers.XbimSerialiser
 {
