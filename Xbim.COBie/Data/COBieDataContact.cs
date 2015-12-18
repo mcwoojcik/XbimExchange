@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Xbim.COBie.Rows;
+using Xbim.Ifc2x3;
 using Xbim.Ifc2x3.ActorResource;
 using Xbim.Ifc2x3.PropertyResource;
 
@@ -85,7 +86,7 @@ namespace Xbim.COBie.Data
                 string department = "";
                 if (ifcPerson.Addresses != null)
                 {
-                    department = ifcPerson.Addresses.PostalAddresses.Select(dept => dept.InternalLocation).Where(dept => !string.IsNullOrEmpty(dept)).FirstOrDefault();
+                    department = ifcPerson.Addresses.OfType<IfcPostalAddress>().Select(dept => dept.InternalLocation).Where(dept => !string.IsNullOrEmpty(dept)).FirstOrDefault();
                 }
                 if (string.IsNullOrEmpty(department))
                 {
@@ -151,11 +152,11 @@ namespace Xbim.COBie.Data
             return contacts;
         }
 
-        private static void GetContactAddress(COBieContactRow contact, AddressCollection addresses)
+        private static void GetContactAddress(COBieContactRow contact, ItemSet<IfcAddress> addresses)
         {
-            if ((addresses != null) && (addresses.PostalAddresses  != null))
+            if (addresses != null) 
             {
-                IfcPostalAddress ifcPostalAddress = addresses.PostalAddresses.FirstOrDefault();
+                IfcPostalAddress ifcPostalAddress = addresses.OfType<IfcPostalAddress>().FirstOrDefault();
                 if (ifcPostalAddress != null) 
                 {
                     List<string> street = new List<string>();

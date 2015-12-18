@@ -12,6 +12,7 @@ using System.Text.RegularExpressions;
 using System.Xml;
 using System.Xml.Serialization;
 using Xbim.Common.Logging;
+using Xbim.Ifc2x3;
 using Xbim.Ifc2x3.ActorResource;
 using Xbim.Ifc2x3.ExternalReferenceResource;
 using Xbim.Ifc2x3.Kernel;
@@ -105,7 +106,7 @@ namespace Xbim.COBieLite
         private Lookup<string, IfcElement> _elementTypeToElementObjectMap;
 */
         private Dictionary<IfcTypeObject, IfcAsset> _assetAsignments;
-        private Dictionary<IfcSystem, ObjectDefinitionSet> _systemAssignment;
+        private Dictionary<IfcSystem, ItemSet<IfcObjectDefinition>> _systemAssignment;
         private Dictionary<IfcObjectDefinition, List<IfcSystem>> _systemLookup;
         private HashSet<string> _cobieProperties = new HashSet<string>();
         private Dictionary<IfcElement, List<IfcSpace>> _spaceAssetLookup;
@@ -420,7 +421,7 @@ namespace Xbim.COBieLite
         {
             get { return _systemLookup; }
         }
-        public IDictionary<IfcSystem, ObjectDefinitionSet> SystemAssignment
+        public IDictionary<IfcSystem, ItemSet<IfcObjectDefinition>> SystemAssignment
         {
             get { return _systemAssignment; }
         }
@@ -446,22 +447,22 @@ namespace Xbim.COBieLite
                     switch (unitType)
                     {
                         case IfcUnitEnum.AREAUNIT:
-                            _hasAreaUnit = Enum.TryParse(AdjustUnitName(unit.GetName()), true,
+                            _hasAreaUnit = Enum.TryParse(AdjustUnitName(unit.Name()), true,
                                 out _modelAreaUnit);
                             break;
                         case IfcUnitEnum.LENGTHUNIT:
-                            _hasLinearUnit = Enum.TryParse(AdjustUnitName(unit.GetName()), true,
+                            _hasLinearUnit = Enum.TryParse(AdjustUnitName(unit.Name()), true,
                                 out _modelLinearUnit);
                             break;
                         case IfcUnitEnum.VOLUMEUNIT:
-                            _hasVolumeUnit = Enum.TryParse(AdjustUnitName(unit.GetName()), true,
+                            _hasVolumeUnit = Enum.TryParse(AdjustUnitName(unit.Name()), true,
                                 out _modelVolumeUnit);
                             break;
                     }
                 }
                 else if (unit is IfcMonetaryUnit)
                 {
-                    _hasCurrencyUnit = Enum.TryParse(unit.GetName(), true,
+                    _hasCurrencyUnit = Enum.TryParse(unit.Name(), true,
                         out _modelCurrencyUnit);
                 }
 
@@ -623,17 +624,17 @@ namespace Xbim.COBieLite
 
         public string GetAreaUnit(IfcQuantityArea areaUnit)
         {
-            return areaUnit.Unit != null ? areaUnit.Unit.GetName() : ModelAreaUnit.ToString();
+            return areaUnit.Unit != null ? areaUnit.Unit.Name() : ModelAreaUnit.ToString();
         }
 
         public string GetLinearUnit(IfcQuantityLength lengthUnit)
         {
-            return lengthUnit.Unit != null ? lengthUnit.Unit.GetName() : ModelLinearUnit.ToString();
+            return lengthUnit.Unit != null ? lengthUnit.Unit.Name() : ModelLinearUnit.ToString();
         }
 
         public string GetVolumeUnit(IfcQuantityVolume volumeUnit)
         {
-            return volumeUnit.Unit != null ? volumeUnit.Unit.GetName() : ModelVolumeUnit.ToString();
+            return volumeUnit.Unit != null ? volumeUnit.Unit.Name() : ModelVolumeUnit.ToString();
         }
 
         #endregion
